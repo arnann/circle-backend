@@ -1,0 +1,62 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: circle
+  datasource:
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/circle?serverTimezone=Asia/Shanghai
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  session:
+    timeout: 86400
+    store-type: redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password: abc123
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss"
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*.xml
+
+
+knife4j:
+  enable: true
+  openapi:
+    title: "圈子文档"
+    description: 这里记录服务端所有的接口的入参，出参等等信息
+    email: arnann@163.com
+    concat: 阿楠
+    basic-auth:
+      name: 阿楠
+    url: www.arnan.top
+    version: v1.0
+    terms-of-service-url: https://stackoverflow.com/
+    group:
+      test1:
+        #        group-name: 分组名称默认是group下的名称test1
+        api-rule: package
+        api-rule-resources:
+          - com.arnan.circle
+
+upload:
+  urlPrefix: http://localhost:9090/api/file/
+  path: E:\Projects\circle-backend\src\main\resources\static\upload\
+
