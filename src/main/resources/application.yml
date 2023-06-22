@@ -8,7 +8,7 @@ spring:
     name: circle
   datasource:
     username: root
-    password: abc123
+    password: 666666
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/circle?serverTimezone=Asia/Shanghai
   mvc:
@@ -21,7 +21,7 @@ spring:
     host: 127.0.0.1
     port: 6379
     database: 0
-    password: abc123
+    password: 666666
   jackson:
     date-format: "yyyy-MM-dd HH:mm:ss"
   servlet:
@@ -42,11 +42,11 @@ knife4j:
   openapi:
     title: "圈子文档"
     description: 这里记录服务端所有的接口的入参，出参等等信息
-    email: arnann@163.com
+    email: https://stackoverflow.com/
     concat: 阿楠
     basic-auth:
       name: 阿楠
-    url: www.arnan.top
+    url: https://stackoverflow.com/
     version: v1.0
     terms-of-service-url: https://stackoverflow.com/
     group:
